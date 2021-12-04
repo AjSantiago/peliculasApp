@@ -1,0 +1,19 @@
+<div class="container">
+  <app-galeria
+    [peliculas]="cartelera | slice: 0:6"
+    titulo="Cartelera"
+    origen="cartelera"
+  ></app-galeria>
+
+  <app-galeria
+    [peliculas]="populares | slice: 0:6"
+    titulo="Populares"
+    origen="populares"
+  ></app-galeria>
+
+  <app-galeria
+    [peliculas]="kids | slice: 0:6"
+    titulo="Populares para niños"
+    origen="kids"
+  ></app-galeria>
+</div>

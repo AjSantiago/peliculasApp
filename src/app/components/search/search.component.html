@@ -1,0 +1,34 @@
+<div class="container main-container">
+  <div class="row">
+    <div class="col">
+      <input
+        [(ngModel)]="buscar"
+        name="buscar"
+        type="text"
+        (keyup.enter)="buscarPelicula()"
+        class="form-control"
+        placeholder="Buscar película..."
+      />
+    </div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div
+      class="col card animated fadeIn fast"
+      *ngFor="let movie of moviesSearch; index as i"
+    >
+      <div class="card-block d-grid" (click)="verPelicula(i)">
+        <div class="card-body">
+          <img class="card-img-top puntero" [src]="movie | noImage" />
+          <p class="card-text">
+            {{ movie.original_title }} ({{ movie.release_date | date: "y" }})
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <app-loading class="m-5" *ngIf="loading"></app-loading> -->
+
+<!-- <app-tarjetas *ngIf="!loading" [items]="artistas"></app-tarjetas> -->

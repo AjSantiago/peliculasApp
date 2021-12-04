@@ -1,0 +1,173 @@
+<h1 class="pt-3">{{ titulo }}</h1>
+<hr />
+<div class="row animated fadeIn fast" *ngIf="peliculas">
+  <div class="col-sm-6">
+    <div class="row">
+      <div
+        class="col-md-12 div-pic-1 puntero"
+        [ngStyle]="{
+          'background-image': 'url(' + (peliculas[0] | noImage) + ')'
+        }"
+        (click)="verPelicula(0)"
+      ></div>
+    </div>
+    <div class="row">
+      <div
+        class="col-md-6 div-pic-2 puntero"
+        [ngStyle]="{
+          'background-image': 'url(' + (peliculas[1] | noImage) + ')'
+        }"
+        (click)="verPelicula(1)"
+      ></div>
+      <div
+        class="col-md-6 div-pic-2 puntero"
+        [ngStyle]="{
+          'background-image': 'url(' + (peliculas[2] | noImage) + ')'
+        }"
+        (click)="verPelicula(2)"
+      ></div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="row">
+      <div
+        class="col-md-6 div-pic-2 puntero"
+        [ngStyle]="{
+          'background-image': 'url(' + (peliculas[3] | noImage) + ')'
+        }"
+        (click)="verPelicula(3)"
+      ></div>
+      <div
+        class="col-md-6 div-pic-2 puntero"
+        [ngStyle]="{
+          'background-image': 'url(' + (peliculas[4] | noImage) + ')'
+        }"
+        (click)="verPelicula(4)"
+      ></div>
+    </div>
+    <div class="row">
+      <div
+        class="col-md-12 div-pic-1 puntero"
+        [ngStyle]="{
+          'background-image': 'url(' + (peliculas[5] | noImage) + ')'
+        }"
+        (click)="verPelicula(5)"
+      ></div>
+    </div>
+  </div>
+</div>
+
+<!-- !====================================================================================== -->
+<!-- <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div
+    class="col card animated fadeIn fast"
+    *ngFor="let cart of cartelera; let i = index"
+  >
+    <div class="col-md-4">
+      <img
+        [src]="poster + cartelera[i]['poster_path']"
+        class="img-fluid rounded-start"
+      />
+    </div>
+    <div class="card-block d-grid">
+      <div class="card-body">
+        <h5 class="card-title">{{ cartelera[i].original_title }}</h5>
+        <p class="card-text">
+          {{ cartelera[i].overview }}
+        </p>
+        <p class="card-text">
+          <small class="text-muted"
+            >{{ cartelera[i].release_date }} Promedio:
+            {{ cartelera[i].vote_average }}</small
+          >
+        </p>
+      </div>
+
+      <div class="d-grid gap-2">
+        <button
+          (click)="verPelicula(i, 'cartelera')"
+          type="button"
+          class="btn btn-outline-primary btn-sm"
+        >
+          Ver más...
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- !====================================================================================== -->
+<!-- <div class="container">
+  <h2 class="pt-5">Más Populares</h2>
+  <br />
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div
+      class="col card animated fadeIn fast"
+      *ngFor="let pop of populares; let i = index"
+    >
+      <div class="col-md-4">
+        <img [src]="populares[i] | noImage" class="img-fluid rounded-start" />
+      </div>
+      <div class="card-block d-grid">
+        <div class="card-body">
+          <h5 class="card-title">{{ populares[i].original_title }}</h5>
+          <p class="card-text text-md-start">
+            {{ populares[i].overview | slice: 0:250 }}...
+          </p>
+          <p class="card-text">
+            <small class="text-muted"
+              >{{ populares[i].release_date }} Promedio:
+              {{ populares[i].vote_average }}</small
+            >
+          </p>
+        </div>
+
+        <div class="d-grid gap-2">
+          <button
+            (click)="verPelicula(i, 'populares')"
+            type="button"
+            class="btn btn-outline-primary btn-sm"
+          >
+            Ver más...
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- !====================================================================================== -->
+<!-- <div class="container">
+  <h2 class="pt-5">Más Populares para Niños</h2>
+  <br />
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div
+      class="col card animated fadeIn fast"
+      *ngFor="let kid of kids; let i = index"
+    >
+      <div class="col-md-4">
+        <img [src]="kids[i] | noImage" class="img-fluid rounded-start" />
+      </div>
+      <div class="card-block d-grid">
+        <div class="card-body">
+          <h5 class="card-title">{{ kids[i].original_title }}</h5>
+          <p class="card-text">{{ kids[i].overview | slice: 0:250 }}...</p>
+          <p class="card-text">
+            <small class="text-muted"
+              >{{ kids[i].release_date }} Promedio:
+              {{ kids[i].vote_average }}</small
+            >
+          </p>
+        </div>
+
+        <div class="d-grid gap-2">
+          <button
+            (click)="verPelicula(i, 'kids')"
+            type="button"
+            class="btn btn-outline-primary btn-sm"
+          >
+            Ver más...
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
